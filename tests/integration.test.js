@@ -14,16 +14,24 @@ describe('Awards Interval API - Additional Tests', () => {
 
         min.forEach(item => {
             expect(item).toHaveProperty('producers');
+            expect(item.producers).toBe("Bo Derek");
             expect(item).toHaveProperty('interval');
+            expect(item.interval).toBe(6);
             expect(item).toHaveProperty('previousWin');
+            expect(item.previousWin).toBe(1984);
             expect(item).toHaveProperty('followingWin');
+            expect(item.followingWin).toBe(1990);
         });
 
         max.forEach(item => {
             expect(item).toHaveProperty('producers');
+            expect(item.producers).toBe("Matthew Vaughn");
             expect(item).toHaveProperty('interval');
+            expect(item.interval).toBe(13);
             expect(item).toHaveProperty('previousWin');
+            expect(item.previousWin).toBe(2002);
             expect(item).toHaveProperty('followingWin');
+            expect(item.followingWin).toBe(2015);
         });
     });
 

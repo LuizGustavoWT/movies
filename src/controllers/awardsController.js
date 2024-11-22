@@ -15,6 +15,8 @@ const getAwardsInterval = (req, res) => {
             producerWins[producers].push(winYear);
         });
 
+        console.log(producerWins);
+
         const intervals = Object.keys(producerWins).flatMap((producers) => {
             const wins = producerWins[producers];
             return wins.slice(1).map((win, i) => ({
